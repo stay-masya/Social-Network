@@ -2,11 +2,11 @@
 .item{
 
   display: block;
- border: 1px solid red;
+ border: 1px solid white;
   max-width: 300px;
   margin-bottom: 20px;
   padding: 10px;
-  background-color: darkmagenta;
+  background-color: rgb(52,69,68);
 
 }
 

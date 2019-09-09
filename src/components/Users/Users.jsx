@@ -17,7 +17,7 @@ let Users = (props) => {
     }
 
     return (
-        <div>
+        <div className={s.wrapper}>
 
             <div>
                 {
