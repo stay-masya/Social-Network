@@ -1,0 +1,30 @@
+
+.item{
+
+  display: block;
+ border: 1px solid red;
+  max-width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: darkmagenta;
+
+}
+
+.item img{
+  width: 50px;
+  height:auto;
+  border-radius: 40%;
+}
+
+.mes {
+  color: white;
+}
+
+.text{
+  color: gold;
+}
+
+.like{
+
+  color:black;
+}

@@ -1,0 +1,9 @@
+.profilePage{
+    display: flex;
+}
+.profilePhotos{
+    margin: 20px 30px;
+}
+.profileDescription{
+    margin: 20px 30px;
+}

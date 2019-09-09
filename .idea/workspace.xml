@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac4911c7-566a-475e-ae2a-77d8aa970abb" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1OO1syVD3gIrVr2qeuNfBGYwFGz" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\REACT works\kabzda\my-first\src\components\Header" />
+      <recent name="D:\REACT works\kabzda\my-first\src\redux" />
+      <recent name="D:\REACT works\kabzda\my-first\src\components\Profile" />
+      <recent name="D:\REACT works\kabzda\my-first\src\components\Preloader" />
+      <recent name="D:\REACT works\kabzda\my-first\src\components\Users" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac4911c7-566a-475e-ae2a-77d8aa970abb" name="Default Changelist" comment="" />
+      <created>1563834048705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563834048705</updated>
+      <workItem from="1563834062934" duration="16931000" />
+      <workItem from="1564487814907" duration="96000" />
+      <workItem from="1565197121764" duration="24926000" />
+      <workItem from="1565438520474" duration="8708000" />
+      <workItem from="1565455765681" duration="4301000" />
+      <workItem from="1565537703934" duration="20346000" />
+      <workItem from="1565629497964" duration="5877000" />
+      <workItem from="1565708270244" duration="17795000" />
+      <workItem from="1565894862818" duration="873000" />
+      <workItem from="1565899526361" duration="34780000" />
+      <workItem from="1566293380925" duration="17302000" />
+      <workItem from="1566472355184" duration="51000" />
+      <workItem from="1566472559538" duration="227000" />
+      <workItem from="1566478746925" duration="16000" />
+      <workItem from="1566478808907" duration="534000" />
+      <workItem from="1566481423771" duration="29000" />
+      <workItem from="1566481513339" duration="132000" />
+      <workItem from="1566481749889" duration="14000" />
+      <workItem from="1566481811623" duration="117000" />
+      <workItem from="1566482014548" duration="151000" />
+      <workItem from="1566482233329" duration="9000" />
+      <workItem from="1566482285626" duration="1453000" />
+      <workItem from="1566487270654" duration="10945000" />
+      <workItem from="1566732380438" duration="14657000" />
+      <workItem from="1566932066892" duration="519000" />
+      <workItem from="1567256247304" duration="8266000" />
+      <workItem from="1567333316539" duration="35590000" />
+      <workItem from="1567624010660" duration="5481000" />
+      <workItem from="1567685874982" duration="27483000" />
+      <workItem from="1567876720377" duration="20056000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

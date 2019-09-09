@@ -1,0 +1,31 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.dialog{
+    padding: 5px;
+
+}
+
+.dialog a{
+    text-decoration: none;
+    color: white;
+}
+
+.contacts{
+    background-color: darkgrey;
+
+}
+
+.messages{
+    background-color:  grey;
+    padding-left: 10px;
+
+}
+
+.dialog .active{
+    color: darkviolet;
+}
+
+

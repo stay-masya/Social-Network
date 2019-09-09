@@ -1,0 +1,17 @@
+.header{
+    grid-area: h;
+    background-color: lawngreen;
+  }
+  
+  .header img{
+    width: 40px;
+  }
+
+.loginStatus{
+    margin: 15px;
+    font-size: 20px;
+    float: right;
+}
+.loginStatus a{
+  color: black;
+}

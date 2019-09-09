@@ -1,0 +1,28 @@
+.fiendsItem{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.photo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.aboutUser{
+    border: 1px solid black;
+}
+.selectPageA{
+    font-weight: bold;
+    cursor: pointer;
+}
+.selectPage{
+    cursor: pointer;
+
+}
+
+.selectPageA ,.selectPage {
+    margin: 5px;
+
+}
+
