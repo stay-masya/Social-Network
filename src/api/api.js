@@ -11,6 +11,15 @@ const instance = axios.create({
 })
 
 export const usersAPI = {
+
+    createPost(props) {
+        return axios.post(`http://bloggy-api.herokuapp.com/posts`,{props})
+            .then(response =>console.log(response))
+
+
+    },
+
+
     getUsers(pageSize, currentPage) {
         return instance.get(`/users?count=${pageSize}&page=${currentPage}`)
             .then(response => response.data)
@@ -28,6 +37,7 @@ export const usersAPI = {
 
     },
 };
+
 export const headerAPI = {
         setUserLoginData (){
             return instance.get(`/auth/me`)
@@ -35,11 +45,15 @@ export const headerAPI = {
         }
     };
 
-
 export const profileAPI = {
     setUserPage(userId){
        return  instance.get(`/profile/${userId}`)
-
+    },
+    getStatus(userId){
+        return  instance.get(`/profile/status/${userId}`)
+    },
+    updateStatus(status){
+        return  instance.put(`/profile/status/`,{status})
     }
 
 };

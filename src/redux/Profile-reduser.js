@@ -1,15 +1,15 @@
-import * as axios from "axios";
 import {profileAPI} from "../api/api";
 
 const ADD_POST ='ADD-POST';
 const UPDATE_NEW_POST_TEXT ='UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE ='SET-USER-PROFILE';
+const GET_STATUS ='GET_STATUS';
+const SET_STATUS ='SET_STATUS';
 
 
 export const addPostActionCreator= ()=>{
     return{
         type: ADD_POST
-
     }
 };
 
@@ -24,6 +24,18 @@ export const setUserProfileAC = (profilePage)=>{
         type : SET_USER_PROFILE, profilePage
     }
 };
+
+export const setUserStatusAC = (status)=>{
+    return{
+        type : SET_STATUS, status
+    }
+};
+
+export const getUserStatusAC = (status)=>{
+    return{
+        type : GET_STATUS, status
+    }
+};
 //   THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK
 
 export const getUserProfile = (userId) => {
@@ -31,6 +43,25 @@ export const getUserProfile = (userId) => {
         profileAPI.setUserPage(userId)
             .then(response => {
                 dispatch(setUserProfileAC(response.data))
+            })
+    }
+};
+
+export const getStatus = (userId) => {
+    return (dispatch) => {
+        profileAPI.getStatus(userId)
+            .then(response => {
+                dispatch(getUserStatusAC(response.data))
+            })
+    }
+};
+export const updateStatus = (status) => {
+    return (dispatch) => {
+        profileAPI.updateStatus(status)
+            .then(response => {
+                if (response.data.resultCode===0){
+                dispatch(setUserStatusAC(status))
+                }
             })
     }
 };
@@ -44,6 +75,7 @@ let initialState ={
 
     ],
     textareaPosts: '',
+    status:'',
     profilePage : null
 }
 
@@ -71,6 +103,18 @@ const profileReducer = (state = initialState,action) => {
                 profilePage : action.profilePage
             };
 
+        }
+
+        case GET_STATUS:{
+            return  {...state,
+                status  : action.status
+            };
+        }
+
+        case SET_STATUS:{
+            return  {...state,
+                status  : action.status
+            };
         }
 
         default:{

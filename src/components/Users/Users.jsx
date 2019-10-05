@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Users.module.css'
 import avaIcon from '../../Addition/Img/user.png'
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
 
 
 let Users = (props) => {
@@ -17,7 +16,7 @@ let Users = (props) => {
     }
 
     return (
-        <div className={s.wrapper}>
+        <div>
 
             <div>
                 {

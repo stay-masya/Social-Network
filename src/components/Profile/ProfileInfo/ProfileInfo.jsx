@@ -2,6 +2,7 @@ import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from "../../Preloader/Preloader";
 import LargeAvaIcon from './../../../Addition/Img/userlarge.jpg'
+import ProfileStatus from "./ProfileStatus";
 
 
 const ProfileInfo = (props) => {
@@ -20,6 +21,8 @@ const ProfileInfo = (props) => {
 
 
                <div className={s.profileDescription}>
+
+                   <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                    <div>{props.profilePage.fullName}</div>
                    <div>long story shot : {props.profilePage.aboutMe}</div>
                    <div>looking for work : {!props.profilePage.lookingForAJob? 'Actively looking':'Already working' }</div>

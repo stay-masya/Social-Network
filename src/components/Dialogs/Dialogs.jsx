@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
+import {usersAPI} from "../../api/api";
 
 
 
@@ -49,9 +50,11 @@ const Dialogs = (props) => {
     let onSendMessage = ()=>{
 
         props.onSendMessage();
-        //props.dispatch(sendMessageActionCreator());
+
 
     };
+
+
 
     return (
         <div className={s.dialogs}>
@@ -73,6 +76,8 @@ const Dialogs = (props) => {
                     <div>
                         <button  onClick={onSendMessage} >Send...</button>
                     </div>
+
+
 
                 </div>
 
