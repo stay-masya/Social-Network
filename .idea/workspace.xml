@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ac4911c7-566a-475e-ae2a-77d8aa970abb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Profile-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Profile-reduser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Heades.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Heades.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeadesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeadesContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Auth-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Auth-reduser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/GIT/Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/login" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\REACT works\MyProj\Social-Network\src\components\login" />
+      <recent name="D:\REACT works\MyProj\Social-Network\src\Addition\FormsType" />
       <recent name="D:\REACT works\kabzda\my-first\src\components\Header" />
       <recent name="D:\REACT works\kabzda\my-first\src\redux" />
       <recent name="D:\REACT works\kabzda\my-first\src\components\Profile" />
-      <recent name="D:\REACT works\kabzda\my-first\src\components\Preloader" />
-      <recent name="D:\REACT works\kabzda\my-first\src\components\Users" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,7 +128,10 @@
       <workItem from="1568233046903" duration="19234000" />
       <workItem from="1568369952416" duration="1212000" />
       <workItem from="1568795198192" duration="242000" />
-      <workItem from="1570030452402" duration="19287000" />
+      <workItem from="1570030452402" duration="23995000" />
+      <workItem from="1570466551294" duration="1214000" />
+      <workItem from="1572615521870" duration="16859000" />
+      <workItem from="1572785462699" duration="12123000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

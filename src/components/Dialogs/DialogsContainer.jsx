@@ -7,24 +7,18 @@ import {connect} from "react-redux";
 let mapStateToProps = (state) => {
     return {
         dialog: state.dialog
-
     }
 };
 
 let mapDispatchToProps = (dispatch) => {
     return {
-
         updateNewMessageText: (text) => {
             dispatch(updateNewMessageTextActionCreator(text));
         },
-
         onSendMessage: () => {
-
                 dispatch(addMessageActionCreator())
-
         }
     }
-
 };
 
 
