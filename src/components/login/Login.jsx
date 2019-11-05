@@ -19,21 +19,16 @@ const LoginForm = (props) => {
         <div className={s.content}>
             <div className={s.title}>Sing In</div>
             <form onSubmit={props.handleSubmit} className={s.form}>
-
-
                 <div className={s.label}>
                     Email:
                 </div>
                 <Field placeholder={"Email"} name={"login"} component={Input}
                        validate={[required, minLength3]} className={s.field}/>
-
-
                 <div className={s.label}>
                     Password:
                 </div>
                 <Field placeholder={"Password"} name={"password"} component={Input}
                        type={"password"} validate={[required, minLength3]} className={s.field}/>
-
                 {props.error && <div className={s.error}>{props.error}</div>}
                 <div className={s.control}>
                     <div>
