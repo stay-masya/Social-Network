@@ -1,3 +1,57 @@
 .error{
     color: red;
 }
+
+.breadcrumbs{
+    position: relative;
+    text-transform: uppercase;
+    width: 200px;
+    margin-top: 50px;
+    padding: 10px 10px 10px 35px;
+    background-color: #f9f9f9;
+}
+.breadcrumbs::after{
+    position: absolute;
+    content: ' ';
+    top:0;
+    left:245px;
+    height: 0;
+    border: 26px solid transparent;
+    border-left-color: #f9f9f9;
+    border-right: 0;
+}
+
+.content{
+    width: 350px;
+    text-align:center;
+    border: 1px solid gray;
+    padding: 0;
+    margin: 100px auto;
+    background-color: #f9f9f9;
+}
+.title{
+    font-size: 20px;
+    text-align:left;
+    background-color: #f0f0f0;
+    padding: 7px 15px;
+}
+.label{
+    padding: 8px 5px 5px;
+    font-size: 17px;
+    text-align:left;
+}
+.form{
+    font-size: 17px;
+    margin:15px 10px ;
+    background-color: #f9f9f9;
+}
+.field{
+    width: 95%;
+    padding: 5px;
+}
+.control{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
