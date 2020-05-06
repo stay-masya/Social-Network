@@ -2,38 +2,40 @@ import React from 'react';
 import s from './Users.module.css'
 import avaIcon from '../../Addition/Img/user.png'
 import {NavLink} from "react-router-dom";
+import {UsersExtendedType} from "../../types/types";
 
 
-let Users = (props) => {
+type UserTypes={
+    totalUsersCount : number
+    pageSize : number
+    currentPage : number
+    onPageSelect : (p:number)=>void
+    users : Array<UsersExtendedType>
+    inProgresStatusUsers : Array<number>
+    unFollow :(userId:number)=>void
+    follow :(userId:number)=>void
+}
 
-
-    let pageNumber = Math.ceil(props.totalUsersCount / props.pageSize);
-
+let Users:React.FC<UserTypes> = ({totalUsersCount,pageSize,onPageSelect,users,currentPage,...props}) => {
+    let pageNumber = Math.ceil(totalUsersCount / pageSize);
     let pageCounter = [];
     for (let i = 1; i <= pageNumber; i++) {
         pageCounter.push(i);
-
     }
-
     return (
         <div>
-
             <div>
                 {
                     pageCounter.map(p => {
                         return <span onClick={() => {
-                            props.onPageSelect(p)
-                        }} className={props.currentPage === p ? s.selectPageA : s.selectPage}>{p}</span>
+                            onPageSelect(p)
+                        }} className={currentPage === p ? s.selectPageA : s.selectPage}>{p}</span>
                     })
                 }
             </div>
-
-
             {
-
-                props.users.map(u => <div key={u.id} className={s.fiendsItem}>
+                users.map(u => <div key={u.id} className={s.fiendsItem}>
                     <div className={s.photo}>
-
                         <NavLink to={'/profile/' + u.id}>
                             <img src={u.photos.small !== null ? u.photos.small : avaIcon} alt=""/>
                         </NavLink>
@@ -45,8 +47,6 @@ let Users = (props) => {
                                         props.unFollow(u.id)
 
                                     }}>Unfollow</button>
-
-
                                     : <button disabled={props.inProgresStatusUsers.some(id=> id==u.id)} onClick={() => {
 
                                         props.follow(u.id)
@@ -54,9 +54,7 @@ let Users = (props) => {
                                     }}>Follow</button>
                             }
                         </div>
-
                     </div>
-
                     <div className={s.aboutUser}>
                         <div>{u.name}</div>
                         <div>
@@ -69,10 +67,7 @@ let Users = (props) => {
                 </div>)
             }
             <button>Get more</button>
-
         </div>)
-
-
 };
 
 

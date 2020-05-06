@@ -1,124 +1,69 @@
 import {usersAPI} from "../api/api";
-import {PhotosType, UsersType} from "../types/types";
+import {UsersExtendedType} from "../types/types";
+import {Dispatch} from "redux";
+import {ThunkAction} from "redux-thunk";
+import {InferReturnType} from "./redux-store";
 
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
-const GET_USERS = 'GET-USERS'
-const PAGE_CHANGE = 'PAGE-CHANGE'
-const TOTAL_USER_COUNT_CHANGE = 'TOTAL_USER_COUNT_CHANGE'
-const TOGGLE_SWITCH = 'TOGGLE_SWITCH'
-const TOGGLE_PROGRES_BUTTON = 'TOGGLE_PROGRES_BUTTON'
+type ActionTypes = InferReturnType<typeof actions>
 
-type UnFollowACType = {
-    type: typeof UNFOLLOW,
-    userId: number
+export const actions = {
+    unFollowAC: (userId: number) => ({type: 'UNFOLLOW', userId} as const),
+    followAC: (userId: number) => ({type: 'FOLLOW', userId: userId} as const),
+    getUsersAC: (user: Array<UsersExtendedType>) => ({type: 'GET_USERS', users: user} as const),
+    getPageAC: (page: number) => ({type: 'PAGE_CHANGE', page} as const),
+    getTotalUsersAC: (number: number) => ({type: 'TOTAL_USER_COUNT_CHANGE', number}as const),
+    toggleSwitchAC: (status: boolean) => ({type: 'TOGGLE_SWITCH', loadStatus: status} as const),
+    toggleProgresButtonAC: (progresStatus: boolean, id: number) => ({type: 'TOGGLE_PROGRES_BUTTON',progresStatus,id}as const) ,
 }
-export const unFollowAC = (userId: number): UnFollowACType => {
-    return {
-        type: UNFOLLOW,
-        userId: userId
-    }
-};
-
-type FollowACType = {
-    type: typeof FOLLOW,
-    userId: number
-}
-export const followAC = (userId: number): FollowACType => {
-    return {
-        type: FOLLOW,
-        userId: userId
-    }
-};
-
-type GetUsersACType = {
-    type: typeof GET_USERS,
-    users: Array<UsersType>
-}
-export const getUsersAC = (user: Array<UsersType>): GetUsersACType => {
-    return {
-        type: GET_USERS,
-        users: user
-    };
-};
-
-export const getPageAC = (page: number) => {
-    return {
-        type: PAGE_CHANGE,
-        page: page
-    };
-};
-
-export const getTotalUsersAC = (number: number) => {
-    return {
-        type: TOTAL_USER_COUNT_CHANGE,
-        number: number
-    };
-};
-
-export const toggleSwitchAC = (status: boolean) => {
-
-    return {
-        type: TOGGLE_SWITCH,
-        loadStatus: status
-    };
-};
-
-export const toggleProgresButtonAC = (progresStatus: boolean, id: number) => {
-
-    return {
-        type: TOGGLE_PROGRES_BUTTON,
-        progresStatus,
-        id
-    };
-};
-
-export const getUsers = (pageSize: number, currentPage: number) => async (dispatch: any) => {
-    dispatch(getPageAC(currentPage))
-    dispatch(toggleSwitchAC(true))
-    let response = await usersAPI.getUsers(pageSize, currentPage)
-    dispatch(toggleSwitchAC(false))
-    dispatch(getUsersAC(response.items))
-    dispatch(getTotalUsersAC(response.totalCount))
-};
 
 
 //   THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK    THUNK
 
-export const unFollow = (userId: number) => async (dispatch: any) => {
-    dispatch(toggleProgresButtonAC(true, userId))
-    let response = await usersAPI.unFollow(userId)
-    if (response.resultCode === 0) {
-        dispatch(unFollowAC(userId))
-    }
-    dispatch(toggleProgresButtonAC(false, userId));
-};
+export const unFollow = (userId: number): ThunkAction<Promise<void>, InitialStateType, unknown, ActionTypes> =>
+    async (dispatch) => {
+        dispatch(actions.toggleProgresButtonAC(true, userId))
+        let response = await usersAPI.unFollow(userId)
+        if (response.resultCode === 0) {
+            dispatch(actions.unFollowAC(userId))
+        }
+        dispatch(actions.toggleProgresButtonAC(false, userId));
+    };
 
-export const follow = (userId: number) => async (dispatch:any) => {
-    dispatch(toggleProgresButtonAC(true, userId))
-    let response = await usersAPI.follow(userId)
-    if (response.resultCode === 0) {
-        dispatch(followAC(userId))
-    }
-    dispatch(toggleProgresButtonAC(false, userId));
-};
+export const getUsers = (pageSize: number, currentPage: number) =>
+    async (dispatch: Dispatch<ActionTypes>) => {
+        dispatch(actions.getPageAC(currentPage))
+        dispatch(actions.toggleSwitchAC(true))
+        let response = await usersAPI.getUsers(pageSize, currentPage)
+        dispatch(actions.toggleSwitchAC(false))
+        dispatch(actions.getUsersAC(response.items))
+        dispatch(actions.getTotalUsersAC(response.totalCount))
+    };
+
+export const follow = (userId: n umber): ThunkAction<Promise<void>, InitialStateType, unknown, ActionTypes> =>
+    async (dispatch) => {
+        dispatch(actions.toggleProgresButtonAC(true, userId))
+        let response = await usersAPI.follow(userId)
+        if (response.resultCode === 0) {
+            dispatch(actions.followAC(userId))
+        }
+        dispatch(actions.toggleProgresButtonAC(false, userId));
+    };
 
 let initialState = {
-    users: [] as Array<UsersType>,
+    users: [] as Array<UsersExtendedType>,
     pageSize: 7,// кол-во пользователей на стр
     totalUsersCount: 0, //всего пользователей
     currentPage: 1,//какая страница
     isReady: true, //крутилка
     inProgresStatusUsers: [] as Array<number> //array of users id (1507 my id)
 };
-
 type InitialStateType = typeof initialState;
+
+
 //   REDUCER    REDUCER    REDUCER    REDUCER    REDUCER    REDUCER    REDUCER    REDUCER    REDUCER    REDUCER
-const usersReducer = (state = initialState, action: any): InitialStateType => {
-
+const usersReducer = (state = initialState, action:ActionTypes): InitialStateType => {
     switch (action.type) {
-
-        case UNFOLLOW: {
+        case 'UNFOLLOW':
             return {
                 ...state,
                 users: state.users.map(u => {
@@ -131,9 +76,7 @@ const usersReducer = (state = initialState, action: any): InitialStateType => {
                     return u
                 })
             }
-        }
-
-        case FOLLOW: {
+        case 'FOLLOW':
             return {
                 ...state,
                 users: state.users.map(u => {
@@ -146,59 +89,40 @@ const usersReducer = (state = initialState, action: any): InitialStateType => {
                     return u
                 })
             };
-
-        }
-
-        case GET_USERS: {
+        case "GET_USERS":
             return {
                 ...state,
                 users: action.users
             };
-
-        }
-
-        case PAGE_CHANGE: {
-
+        case 'PAGE_CHANGE': {
             return {
                 ...state,
                 currentPage: action.page
             };
-
         }
-
-        case TOTAL_USER_COUNT_CHANGE: {
-
+        case 'TOTAL_USER_COUNT_CHANGE': {
             return {
                 ...state,
                 totalUsersCount: action.number
             };
-
         }
-
-        case TOGGLE_SWITCH: {
-
+        case 'TOGGLE_SWITCH': {
             return {
                 ...state,
                 isReady: action.loadStatus
             };
-
         }
-
-        case TOGGLE_PROGRES_BUTTON: {
+        case 'TOGGLE_PROGRES_BUTTON': {
             return {
                 ...state,
                 inProgresStatusUsers: action.progresStatus
                     ? [...state.inProgresStatusUsers, action.id]
                     : state.inProgresStatusUsers.filter(id => id !== action.id)
-
-
             };
         }
-
         default: {
             return state
         }
-
     }
 };
 

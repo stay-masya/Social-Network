@@ -1,4 +1,4 @@
-import * as axios from "axios";
+import axios, {AxiosResponse} from "axios";
 
 const instance = axios.create({
     headers: {'API-KEY': '2477fc6d-9f93-4176-aec6-48230d2a3d57'},
@@ -8,30 +8,44 @@ const instance = axios.create({
 })
 
 export const usersAPI = {
-    createPost(props) {
+    createPost(props : any) {
         return axios.post(`http://bloggy-api.herokuapp.com/posts`, {props})
             .then(response => console.log(response))
     },
-    getUsers(pageSize, currentPage) {
+    getUsers(pageSize:number, currentPage:number) {
         return instance.get(`/users?count=${pageSize}&page=${currentPage}`)
             .then(response => response.data)
     },
-    follow(id) {
+    follow(id:number) {
         return instance.post(`/follow/${id}`)
             .then(response => response.data)
     },
-    unFollow(id) {
+    unFollow(id:number) {
         return instance.delete(`/follow/${id}`)
             .then(response => response.data)
     },
 };
 
+export enum ResultCodeEnum{
+    Success=0,
+    Error=1
+}
+
+type MeResponseType={
+    resultCode: ResultCodeEnum
+    messages: Array<any>
+    data: {
+        id: number
+        email: string
+        login: string
+    }
+}
 export const headerAPI = {
     setUserLoginData() {
-        return instance.get(`/auth/me`)
+        return instance.get<MeResponseType>(`/auth/me`)
             .then(response => response.data)
     },
-    login(email, password, rememberMe=false) {
+    login(email:string, password:string, rememberMe:boolean=false) {
         return instance.post(`/auth/login`, {email, password, rememberMe})
         .then(response => response.data)
     },
@@ -43,19 +57,15 @@ export const headerAPI = {
 
 
 export const profileAPI = {
-    setUserPage(userId) {
+    setUserPage(userId:number) {
         return instance.get(`/profile/${userId}`)
     },
-    getStatus(userId) {
+    getStatus(userId:number) {
         return instance.get(`/profile/status/${userId}`)
     },
-    updateStatus(status) {
+    updateStatus(status:string) {
         return instance.put(`/profile/status/`, {status})
     }
 };
 
-
-
-
-
-
+// headerAPI.setUserLoginData().then((res:AxiosResponse<number>) =>res.data)

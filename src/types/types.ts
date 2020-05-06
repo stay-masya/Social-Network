@@ -29,4 +29,14 @@ export type UsersType={
     id: number
     name: string
     status: string
+    photos:PhotosType
+
 }
+export type UsersExtendedType={
+    id: number
+    name: string
+    status: string
+    photos:PhotosType
+    followStatus:boolean
+}
+

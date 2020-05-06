@@ -1,9 +1,9 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react';
 
-const ProfileInfo = (props) => {
+const ProfileInfo = (props:any) => {
 
-    let [aditMode,setMode ]=useState(false)
-    let [status,setStatus ]=useState(props.status)
+    let [aditMode,setMode ]=useState<boolean>(false)
+    let [status,setStatus ]=useState<string>(props.status)
 
     useEffect(()=>{
         setStatus(props.status)
@@ -16,7 +16,7 @@ const ProfileInfo = (props) => {
         setMode(false)
         props.updateStatus(status)
     }
-    const onStatusChange=(e)=>{
+    const onStatusChange=(e:ChangeEvent<HTMLInputElement>)=>{
         setStatus(e.currentTarget.value)
     }
 

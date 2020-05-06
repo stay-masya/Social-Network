@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4911c7-566a-475e-ae2a-77d8aa970abb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Auth-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Auth-reduser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Dialogs-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Dialogs-reduser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Profile-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Profile-reduser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Users-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Users-reduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Auth-reduser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Auth-reduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Users-reduser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Users-reduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -40,7 +46,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="D:\REACT works\MyProj\Social-Network\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -134,6 +140,17 @@
       <workItem from="1576330269807" duration="4859000" />
       <workItem from="1583009887787" duration="1223000" />
       <workItem from="1583260700526" duration="10411000" />
+      <workItem from="1583353826953" duration="3934000" />
+      <workItem from="1583433868405" duration="3054000" />
+      <workItem from="1583438567882" duration="6183000" />
+      <workItem from="1583573056904" duration="5047000" />
+      <workItem from="1583596077815" duration="18012000" />
+      <workItem from="1583695835371" duration="798000" />
+      <workItem from="1583699132251" duration="61000" />
+      <workItem from="1586251809581" duration="10742000" />
+      <workItem from="1587394829923" duration="21578000" />
+      <workItem from="1587746604468" duration="5922000" />
+      <workItem from="1587993247677" duration="6146000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
